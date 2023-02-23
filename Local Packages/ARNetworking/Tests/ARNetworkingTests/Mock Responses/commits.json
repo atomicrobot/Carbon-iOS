@@ -1,0 +1,81 @@
+[
+  {
+    "sha": "3650f33f0234077c709c9767d0a43db17e0a190d",
+    "node_id": "C_kwDOAPYR29oAKDM2NTBmMzNmMDIzNDA3N2M3MDljOTc2N2QwYTQzZGIxN2UwYTE5MGQ",
+    "commit": {
+      "author": {
+        "name": "Kurt Burroughs",
+        "email": "95700875+KBurroughs@users.noreply.github.com",
+        "date": "2023-01-11T18:06:20Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2023-01-11T18:06:20Z"
+      },
+      "message": "Bugfix/version (#151)\n\n* Added back version testing, added versionName back to gradle file, added additional logic/route for receiving versioning values from build server, and fixed gradle task (previously inaccessible from gradle menu)\r\n\r\n* Fixed ktlintKotlinScriptCheck error\r\n\r\n* Forgot to fix variable name, swap active to previous implementation.\r\n\r\n* Add comment for local testing\r\n\r\n* Redundant toString call removed\r\n\r\n* Revert continuousIntegration task logic (this did work before, I was just doing it wrong)\r\n\r\n* Made bottom bar stateless and hoisted version / fingerprint to MainScreen (a revert to getting version name and fingerprint from MainViewModel)\r\n\r\n* Update regex to include numbers",
+      "tree": {
+        "sha": "429a55ba62f6a7ba778b0b8b870546fee5b7d534",
+        "url": "https://api.github.com/repos/atomicrobot/Carbon-Android/git/trees/429a55ba62f6a7ba778b0b8b870546fee5b7d534"
+      },
+      "url": "https://api.github.com/repos/atomicrobot/Carbon-Android/git/commits/3650f33f0234077c709c9767d0a43db17e0a190d",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJjvvqcCRBK7hj4Ov3rIwAAomQIAKJUvlWPA7FRA+Mpvgao4uHx\neptcyLwcjivra8IyYA0e9pNZ2R3U+UBy+5k4a5CMHQMPLhHzKe7t0nanxEzJI90s\nkdGDtuuXMijM6XlnUtmDYiUv7Q82dULj1rsIZfthX0wSFRZ6Qh4oG/sGCd6ledyp\n+7i/6H1P4bFDZdMYm6RMHli74X+IWSXj5RT3+dtqfowzyZJ3wz75pyAz7gq8XSlL\n2WZbnemzKZVlTP5OLepHx3xQOC+0fTLpZT4BVQflrj7NOhHmlsydZ3so2/NImx3C\nTFSglgL08EVmaoIGWpFHhfwSyfJj2pCBWrw1oHS7NKJr7T2g0mKowxFLKTDzU2k=\n=OZzO\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 429a55ba62f6a7ba778b0b8b870546fee5b7d534\nparent bc65b75e7d10d60d7907287283b11c6df57358e4\nauthor Kurt Burroughs <95700875+KBurroughs@users.noreply.github.com> 1673460380 -0500\ncommitter GitHub <noreply@github.com> 1673460380 -0500\n\nBugfix/version (#151)\n\n* Added back version testing, added versionName back to gradle file, added additional logic/route for receiving versioning values from build server, and fixed gradle task (previously inaccessible from gradle menu)\r\n\r\n* Fixed ktlintKotlinScriptCheck error\r\n\r\n* Forgot to fix variable name, swap active to previous implementation.\r\n\r\n* Add comment for local testing\r\n\r\n* Redundant toString call removed\r\n\r\n* Revert continuousIntegration task logic (this did work before, I was just doing it wrong)\r\n\r\n* Made bottom bar stateless and hoisted version / fingerprint to MainScreen (a revert to getting version name and fingerprint from MainViewModel)\r\n\r\n* Update regex to include numbers"
+      }
+    },
+    "url": "https://api.github.com/repos/atomicrobot/Carbon-Android/commits/3650f33f0234077c709c9767d0a43db17e0a190d",
+    "html_url": "https://github.com/atomicrobot/Carbon-Android/commit/3650f33f0234077c709c9767d0a43db17e0a190d",
+    "comments_url": "https://api.github.com/repos/atomicrobot/Carbon-Android/commits/3650f33f0234077c709c9767d0a43db17e0a190d/comments",
+    "author": {
+      "login": "KBurroughs",
+      "id": 95700875,
+      "node_id": "U_kgDOBbRHiw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/95700875?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/KBurroughs",
+      "html_url": "https://github.com/KBurroughs",
+      "followers_url": "https://api.github.com/users/KBurroughs/followers",
+      "following_url": "https://api.github.com/users/KBurroughs/following{/other_user}",
+      "gists_url": "https://api.github.com/users/KBurroughs/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/KBurroughs/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/KBurroughs/subscriptions",
+      "organizations_url": "https://api.github.com/users/KBurroughs/orgs",
+      "repos_url": "https://api.github.com/users/KBurroughs/repos",
+      "events_url": "https://api.github.com/users/KBurroughs/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/KBurroughs/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "bc65b75e7d10d60d7907287283b11c6df57358e4",
+        "url": "https://api.github.com/repos/atomicrobot/Carbon-Android/commits/bc65b75e7d10d60d7907287283b11c6df57358e4",
+        "html_url": "https://github.com/atomicrobot/Carbon-Android/commit/bc65b75e7d10d60d7907287283b11c6df57358e4"
+      }
+    ]
+  }
+]

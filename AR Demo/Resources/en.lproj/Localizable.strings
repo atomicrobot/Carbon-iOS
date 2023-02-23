@@ -1,0 +1,48 @@
+
+/* REPOSITORY LIST */
+"repository_list_title" = "Repository List";
+
+/* Repository List - Error - Title */
+"repository_list_error_title" = "Repository Error";
+
+/* Repository List - Error - Description */
+"repository_list_error_description" = "There was an error fetching the list of repositories.";
+
+/* COMMIT LIST */
+/* Commit List - Error - Title */
+"commit_list_error_title" = "Repository Error";
+
+/* Commit List - Error - Description */
+"commit_list_error_description" = "There was an error fetching the list of commits for this repository.";
+
+/* COMMIT DETAILS */
+/* Title */
+"commit_details_title" = "Commit Details";
+
+/* Author */
+"commit_author" = "Author";
+
+/* Date */
+"commit_date" = "Date";
+
+/* Commit message */
+"commit_message" = "Message";
+
+/* Commit Details - Error - Title */
+"commit_details_error_title" = "Commit Error";
+
+/* Commit Details - Error - Description */
+"commit_details_error_description" = "There was an error fetching the details of this commit.";
+
+/* GENERAL */
+/* Tab - Main */
+"tab_main" = "Main";
+
+/* Tab - Info */
+"tab_info" = "Info";
+
+/* Loading */
+"loading" = "Loading";
+
+/* Okay */
+"ok" = "OK";

@@ -1,0 +1,6 @@
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+PRODUCT_NAME = AR Demo
+PRODUCT_BUNDLE_IDENTIFIER = com.atomicrobot.ios.ardemo
+PRODUCT_MODULE_NAME = ARDemo

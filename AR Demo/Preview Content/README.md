@@ -1,0 +1,4 @@
+#  Preview Content
+TBH I had no idea why Xcode created this folder with this .xcassets asset catalog, and I nearly deleted it. But then I decided that it must have been created for a good reason and I started Googling which is where I found [this post](https://www.avanderlee.com/xcode/development-assets-preview-catalog/). Basically there's a Build Setting that won't include any of the stuff in this folder into a release build, which means you can put things in here that are only used for previews. Maybe your app has to pull down assets (colors, images, .json) from the web in order to make it work... just put some placeholders in here for your previews! It's a pretty neat idea.
+
+We aren't currently using this in the app, but I thought leaving a little note right here might make it helpful for someone else in the future.
