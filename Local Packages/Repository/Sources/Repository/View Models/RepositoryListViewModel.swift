@@ -1,8 +1,10 @@
+import Architecture
 import ARNetworking
 import Foundation
+import Util
 
-class CommitDetailsViewModel: ObservableObject {
-    @Published var commit: CommitDetails?
+class RepositoryListViewModel: ObservableObject {
+    @Published var repositories = [Repository]()
     @Published var showError = false
 
     private let appManager: AppManagerProtocol
@@ -14,32 +16,30 @@ class CommitDetailsViewModel: ObservableObject {
         }
     }
 
-    init(commit: Commit,
-         appManager: AppManagerProtocol = AppManager.sharedInstance,
+    init(appManager: AppManagerProtocol = AppManager.sharedInstance,
          networkingManager: ARNetworkingProtocol = ARNetworkingManager.sharedInstance) {
         self.appManager = appManager
         self.networkingManager = networkingManager
 
-        fetchDetails(for: commit)
+        fetchData()
     }
 }
 
 // MARK: - Helpers
-extension CommitDetailsViewModel {
-    /// Fetches details for a given commit.
-    /// - Parameter commit: The `Commit`
-    private func fetchDetails(for commit: Commit) {
-        let request = networkingManager.prepareFetchCommitDetails(with: commit.commit.url, toType: CommitDetails.self)
+extension RepositoryListViewModel {
+    /// A method that attempts to fetch a list of repositories for a default GitHub organization. Errors are handled.
+    private func fetchData() {
+        let request = networkingManager.prepareFetchRespositories(forOrganization: Constants.gitHubOrganization, toType: [Repository].self)
         Task {
             do {
                 appManager.updateLoading(true)
-                let commitDetails = try await request(NetworkUtils.mapResults)
+                let repositories = try await request(NetworkUtils.mapResults)
                 appManager.updateLoading(false)
 
                 DispatchQueue.main.async { [weak self] in
-                    self?.commit = commitDetails
+                    self?.repositories = repositories
                 }
-            } catch {
+            } catch let error as NSError {
                 appManager.updateLoading(false)
 
                 DispatchQueue.main.async { [weak self] in

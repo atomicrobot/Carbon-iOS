@@ -1,4 +1,5 @@
 import SwiftUI
+import Util
 
 struct CommitDetailsView: View {
     @StateObject private var viewModel: CommitDetailsViewModel

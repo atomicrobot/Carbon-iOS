@@ -3,7 +3,7 @@ import Combine
 import Foundation
 
 /// For testing purposes, this is a protocol. You can mock your own class and inject it into classes that require it.
-protocol AppManagerProtocol {
+public protocol AppManagerProtocol {
     /// Tracks the current loading state across the app
     var isLoading: Bool { get }
 
@@ -14,16 +14,16 @@ protocol AppManagerProtocol {
 
 /// A manager to track some overall state of the app. For now it's just holding onto the the `isLoading` state
 /// This is a singleton, and should be accessed with `AppManager.sharedInstance`
-class AppManager: AppManagerProtocol, ObservableObject {
+public class AppManager: AppManagerProtocol, ObservableObject {
     /// Shared instance of this AppManager singleton
-    static let sharedInstance = AppManager()
+    public static let sharedInstance = AppManager()
 
     // Private so we only init once
     private init() {}
 
-    @Published var isLoading = false
+    @Published public var isLoading = false
 
-    func updateLoading(_ isLoading: Bool) {
+    public func updateLoading(_ isLoading: Bool) {
         DispatchQueue.main.async { [weak self] in
             self?.isLoading = isLoading
         }

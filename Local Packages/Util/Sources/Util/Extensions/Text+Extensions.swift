@@ -1,7 +1,6 @@
-
 import SwiftUI
 
-extension Text {
+public extension Text {
     /// Helpful function to return a localized string for a Text field
     /// - Parameter key: The key to translate
     /// - Returns: Text view

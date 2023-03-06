@@ -1,5 +1,7 @@
+import Architecture
 import ARNetworking
 import Foundation
+import Util
 
 class RepositoryDetailsViewModel: ObservableObject {
     @Published var commits = [Commit]()

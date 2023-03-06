@@ -1,9 +1,12 @@
 import SwiftUI
+import Util
 
-struct RepositoryListView: View {
+public struct RepositoryListView: View {
     @StateObject private var viewModel = RepositoryListViewModel()
 
-    var body: some View {
+    public init() {}
+
+    public var body: some View {
         VStack {
             List(viewModel.repositories) { repo in
                 NavigationLink {

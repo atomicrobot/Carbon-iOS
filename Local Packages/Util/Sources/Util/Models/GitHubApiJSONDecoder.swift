@@ -1,4 +1,3 @@
-
 import Foundation
 
 /// Custom JSONDecoder that sets some decoding strategy properties that we'll need for decoding responses from the

@@ -1,3 +1,4 @@
+import Architecture
 import SwiftUI
 
 @main

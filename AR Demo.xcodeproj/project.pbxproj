@@ -8,34 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		263A331229A7C4D5007BCDE0 /* ARNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 263A331129A7C4D5007BCDE0 /* ARNetworking */; };
+		669BE3CD29A8111B00C5AB06 /* Architecture in Frameworks */ = {isa = PBXBuildFile; productRef = 669BE3CC29A8111B00C5AB06 /* Architecture */; };
+		669BE3D229A9475D00C5AB06 /* Repository in Frameworks */ = {isa = PBXBuildFile; productRef = 669BE3D129A9475D00C5AB06 /* Repository */; };
+		669BE3D429A9476E00C5AB06 /* Util in Frameworks */ = {isa = PBXBuildFile; productRef = 669BE3D329A9476E00C5AB06 /* Util */; };
 		AB0F9F8A26DF8435007D736E /* AR_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F9F8926DF8435007D736E /* AR_DemoApp.swift */; };
 		AB0F9F8C26DF8435007D736E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F9F8B26DF8435007D736E /* ContentView.swift */; };
 		AB0F9F8E26DF8438007D736E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB0F9F8D26DF8438007D736E /* Assets.xcassets */; };
 		AB0F9F9126DF8438007D736E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB0F9F9026DF8438007D736E /* Preview Assets.xcassets */; };
 		AB0F9FA526DF8438007D736E /* AR_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F9FA426DF8438007D736E /* AR_DemoUITests.swift */; };
 		AB0F9FA726DF8438007D736E /* AR_DemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F9FA626DF8438007D736E /* AR_DemoUITestsLaunchTests.swift */; };
-		AB0F9FB526DF854E007D736E /* RepositoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F9FB426DF854E007D736E /* RepositoryList.swift */; };
-		AB0F9FB826DF8586007D736E /* RepositoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F9FB726DF8586007D736E /* RepositoryListViewModel.swift */; };
-		AB0F9FBA26DF8675007D736E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F9FB926DF8675007D736E /* Constants.swift */; };
-		AB0F9FBD26DF8D2F007D736E /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F9FBC26DF8D2F007D736E /* RepositoryModel.swift */; };
-		AB0F9FC126DF967F007D736E /* RepositoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F9FC026DF967F007D736E /* RepositoryRow.swift */; };
-		AB0F9FC326DF9D65007D736E /* RepositoryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F9FC226DF9D65007D736E /* RepositoryDetails.swift */; };
-		AB0F9FC526DF9E96007D736E /* RepositoryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F9FC426DF9E96007D736E /* RepositoryDetailsViewModel.swift */; };
 		AB0F9FC726DF9F51007D736E /* LoaderHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F9FC626DF9F51007D736E /* LoaderHUD.swift */; };
-		ABE8E76526DFA4A400FFF660 /* CommitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E76426DFA4A400FFF660 /* CommitModel.swift */; };
-		ABE8E76726DFB45B00FFF660 /* CollaboratorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E76626DFB45B00FFF660 /* CollaboratorModel.swift */; };
-		ABE8E76A26DFB63B00FFF660 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E76926DFB63B00FFF660 /* AppManager.swift */; };
-		ABE8E76C26DFBB2900FFF660 /* CommitDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E76B26DFBB2900FFF660 /* CommitDetails.swift */; };
-		ABE8E76E26DFBC0100FFF660 /* CommitDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E76D26DFBC0100FFF660 /* CommitDetailsModel.swift */; };
-		ABE8E77026DFCC5300FFF660 /* CommitDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E76F26DFCC5300FFF660 /* CommitDetailsViewModel.swift */; };
-		ABE8E77226DFD38800FFF660 /* CollaboratorStubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E77126DFD38800FFF660 /* CollaboratorStubModel.swift */; };
 		ABE8E77626DFED7000FFF660 /* AppManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E77526DFED7000FFF660 /* AppManagerTests.swift */; };
 		ABE8E7BD26E0EE2300FFF660 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ABE8E7BB26E0EE2300FFF660 /* Localizable.strings */; };
-		ABE8E7C026E0EF3300FFF660 /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E7BF26E0EF3300FFF660 /* AppUtils.swift */; };
 		ABE8E7C226E0F04F00FFF660 /* AppUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E7C126E0F04F00FFF660 /* AppUtilsTests.swift */; };
-		ABE8E7C426E12AC500FFF660 /* GitHubApiJSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E7C326E12AC500FFF660 /* GitHubApiJSONDecoder.swift */; };
-		ABE8E80A26E2347000FFF660 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E80926E2347000FFF660 /* NetworkUtils.swift */; };
-		ABE8E80D26E7D3F900FFF660 /* Text+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E80C26E7D3F900FFF660 /* Text+Extensions.swift */; };
 		ABE8E81A26E91EF200FFF660 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E81926E91EF200FFF660 /* Config.swift */; };
 		ABE8E81E26E9329800FFF660 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E81D26E9329800FFF660 /* InfoView.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +44,9 @@
 
 /* Begin PBXFileReference section */
 		263A331029A7B9D8007BCDE0 /* ARNetworking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ARNetworking; path = "Local Packages/ARNetworking"; sourceTree = "<group>"; };
+		669BE3CB29A80FE500C5AB06 /* Architecture */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Architecture; path = "Local Packages/Architecture"; sourceTree = "<group>"; };
+		669BE3CF29A9461700C5AB06 /* Repository */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Repository; path = "Local Packages/Repository"; sourceTree = "<group>"; };
+		669BE3D029A9463A00C5AB06 /* Util */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Util; path = "Local Packages/Util"; sourceTree = "<group>"; };
 		AB0F9F8626DF8435007D736E /* AR Demo (dev).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Demo (dev).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB0F9F8926DF8435007D736E /* AR_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AR_DemoApp.swift; sourceTree = "<group>"; };
 		AB0F9F8B26DF8435007D736E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,29 +56,11 @@
 		AB0F9FA026DF8438007D736E /* AR DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AR DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB0F9FA426DF8438007D736E /* AR_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AR_DemoUITests.swift; sourceTree = "<group>"; };
 		AB0F9FA626DF8438007D736E /* AR_DemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AR_DemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		AB0F9FB426DF854E007D736E /* RepositoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryList.swift; sourceTree = "<group>"; };
-		AB0F9FB726DF8586007D736E /* RepositoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewModel.swift; sourceTree = "<group>"; };
-		AB0F9FB926DF8675007D736E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		AB0F9FBC26DF8D2F007D736E /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
-		AB0F9FC026DF967F007D736E /* RepositoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRow.swift; sourceTree = "<group>"; };
-		AB0F9FC226DF9D65007D736E /* RepositoryDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetails.swift; sourceTree = "<group>"; };
-		AB0F9FC426DF9E96007D736E /* RepositoryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsViewModel.swift; sourceTree = "<group>"; };
 		AB0F9FC626DF9F51007D736E /* LoaderHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderHUD.swift; sourceTree = "<group>"; };
 		AB58FC8926EB7C3E008B798C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		ABE8E76426DFA4A400FFF660 /* CommitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitModel.swift; sourceTree = "<group>"; };
-		ABE8E76626DFB45B00FFF660 /* CollaboratorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaboratorModel.swift; sourceTree = "<group>"; };
-		ABE8E76926DFB63B00FFF660 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
-		ABE8E76B26DFBB2900FFF660 /* CommitDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitDetails.swift; sourceTree = "<group>"; };
-		ABE8E76D26DFBC0100FFF660 /* CommitDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitDetailsModel.swift; sourceTree = "<group>"; };
-		ABE8E76F26DFCC5300FFF660 /* CommitDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitDetailsViewModel.swift; sourceTree = "<group>"; };
-		ABE8E77126DFD38800FFF660 /* CollaboratorStubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaboratorStubModel.swift; sourceTree = "<group>"; };
 		ABE8E77526DFED7000FFF660 /* AppManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManagerTests.swift; sourceTree = "<group>"; };
 		ABE8E7BC26E0EE2300FFF660 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
-		ABE8E7BF26E0EF3300FFF660 /* AppUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
 		ABE8E7C126E0F04F00FFF660 /* AppUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtilsTests.swift; sourceTree = "<group>"; };
-		ABE8E7C326E12AC500FFF660 /* GitHubApiJSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubApiJSONDecoder.swift; sourceTree = "<group>"; };
-		ABE8E80926E2347000FFF660 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
-		ABE8E80C26E7D3F900FFF660 /* Text+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extensions.swift"; sourceTree = "<group>"; };
 		ABE8E81126E91B3500FFF660 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		ABE8E81226E91BA200FFF660 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		ABE8E81326E91C1900FFF660 /* Beta.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Beta.xcconfig; sourceTree = "<group>"; };
@@ -105,6 +75,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				263A331229A7C4D5007BCDE0 /* ARNetworking in Frameworks */,
+				669BE3CD29A8111B00C5AB06 /* Architecture in Frameworks */,
+				669BE3D429A9476E00C5AB06 /* Util in Frameworks */,
+				669BE3D229A9475D00C5AB06 /* Repository in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +101,9 @@
 		263A330C29A7B6DF007BCDE0 /* Local Packages */ = {
 			isa = PBXGroup;
 			children = (
+				669BE3D029A9463A00C5AB06 /* Util */,
+				669BE3CF29A9461700C5AB06 /* Repository */,
+				669BE3CB29A80FE500C5AB06 /* Architecture */,
 				263A331029A7B9D8007BCDE0 /* ARNetworking */,
 			);
 			name = "Local Packages";
@@ -167,10 +143,7 @@
 			children = (
 				AB0F9F8926DF8435007D736E /* AR_DemoApp.swift */,
 				ABE8E81026E91A7700FFF660 /* Config */,
-				AB0F9FB926DF8675007D736E /* Constants.swift */,
 				AB0F9F8B26DF8435007D736E /* ContentView.swift */,
-				ABE8E80B26E7D3E600FFF660 /* Extensions */,
-				ABE8E76826DFB62D00FFF660 /* Managers */,
 				AB0F9FBB26DF8D22007D736E /* Models */,
 				AB0F9F8F26DF8438007D736E /* Preview Content */,
 				ABE8E7B926E0EE0000FFF660 /* Resources */,
@@ -211,12 +184,8 @@
 		AB0F9FB326DF847A007D736E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				ABE8E76B26DFBB2900FFF660 /* CommitDetails.swift */,
 				ABE8E81D26E9329800FFF660 /* InfoView.swift */,
 				AB0F9FC626DF9F51007D736E /* LoaderHUD.swift */,
-				AB0F9FC226DF9D65007D736E /* RepositoryDetails.swift */,
-				AB0F9FB426DF854E007D736E /* RepositoryList.swift */,
-				AB0F9FC026DF967F007D736E /* RepositoryRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,9 +193,6 @@
 		AB0F9FB626DF8573007D736E /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				ABE8E76F26DFCC5300FFF660 /* CommitDetailsViewModel.swift */,
-				AB0F9FC426DF9E96007D736E /* RepositoryDetailsViewModel.swift */,
-				AB0F9FB726DF8586007D736E /* RepositoryListViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -234,22 +200,8 @@
 		AB0F9FBB26DF8D22007D736E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				ABE8E76626DFB45B00FFF660 /* CollaboratorModel.swift */,
-				ABE8E77126DFD38800FFF660 /* CollaboratorStubModel.swift */,
-				ABE8E76D26DFBC0100FFF660 /* CommitDetailsModel.swift */,
-				ABE8E76426DFA4A400FFF660 /* CommitModel.swift */,
-				ABE8E7C326E12AC500FFF660 /* GitHubApiJSONDecoder.swift */,
-				AB0F9FBC26DF8D2F007D736E /* RepositoryModel.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		ABE8E76826DFB62D00FFF660 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				ABE8E76926DFB63B00FFF660 /* AppManager.swift */,
-			);
-			path = Managers;
 			sourceTree = "<group>";
 		};
 		ABE8E7B926E0EE0000FFF660 /* Resources */ = {
@@ -272,18 +224,8 @@
 		ABE8E7BE26E0EF1400FFF660 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				ABE8E7BF26E0EF3300FFF660 /* AppUtils.swift */,
-				ABE8E80926E2347000FFF660 /* NetworkUtils.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		ABE8E80B26E7D3E600FFF660 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				ABE8E80C26E7D3F900FFF660 /* Text+Extensions.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		ABE8E81026E91A7700FFF660 /* Config */ = {
@@ -316,6 +258,9 @@
 			name = "AR Demo";
 			packageProductDependencies = (
 				263A331129A7C4D5007BCDE0 /* ARNetworking */,
+				669BE3CC29A8111B00C5AB06 /* Architecture */,
+				669BE3D129A9475D00C5AB06 /* Repository */,
+				669BE3D329A9476E00C5AB06 /* Util */,
 			);
 			productName = "AR Demo";
 			productReference = AB0F9F8626DF8435007D736E /* AR Demo (dev).app */;
@@ -432,29 +377,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABE8E7C026E0EF3300FFF660 /* AppUtils.swift in Sources */,
-				AB0F9FBA26DF8675007D736E /* Constants.swift in Sources */,
-				ABE8E7C426E12AC500FFF660 /* GitHubApiJSONDecoder.swift in Sources */,
-				AB0F9FB826DF8586007D736E /* RepositoryListViewModel.swift in Sources */,
-				ABE8E80D26E7D3F900FFF660 /* Text+Extensions.swift in Sources */,
-				ABE8E77026DFCC5300FFF660 /* CommitDetailsViewModel.swift in Sources */,
-				ABE8E76726DFB45B00FFF660 /* CollaboratorModel.swift in Sources */,
-				AB0F9FC526DF9E96007D736E /* RepositoryDetailsViewModel.swift in Sources */,
 				AB0F9F8C26DF8435007D736E /* ContentView.swift in Sources */,
 				ABE8E81E26E9329800FFF660 /* InfoView.swift in Sources */,
-				AB0F9FBD26DF8D2F007D736E /* RepositoryModel.swift in Sources */,
-				ABE8E76A26DFB63B00FFF660 /* AppManager.swift in Sources */,
 				AB0F9FC726DF9F51007D736E /* LoaderHUD.swift in Sources */,
-				ABE8E76526DFA4A400FFF660 /* CommitModel.swift in Sources */,
-				ABE8E76E26DFBC0100FFF660 /* CommitDetailsModel.swift in Sources */,
-				AB0F9FC326DF9D65007D736E /* RepositoryDetails.swift in Sources */,
-				AB0F9FB526DF854E007D736E /* RepositoryList.swift in Sources */,
-				ABE8E77226DFD38800FFF660 /* CollaboratorStubModel.swift in Sources */,
 				ABE8E81A26E91EF200FFF660 /* Config.swift in Sources */,
-				AB0F9FC126DF967F007D736E /* RepositoryRow.swift in Sources */,
 				AB0F9F8A26DF8435007D736E /* AR_DemoApp.swift in Sources */,
-				ABE8E80A26E2347000FFF660 /* NetworkUtils.swift in Sources */,
-				ABE8E76C26DFBB2900FFF660 /* CommitDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -969,6 +896,18 @@
 		263A331129A7C4D5007BCDE0 /* ARNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ARNetworking;
+		};
+		669BE3CC29A8111B00C5AB06 /* Architecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Architecture;
+		};
+		669BE3D129A9475D00C5AB06 /* Repository */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Repository;
+		};
+		669BE3D329A9476E00C5AB06 /* Util */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Util;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
