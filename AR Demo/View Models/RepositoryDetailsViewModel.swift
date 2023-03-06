@@ -1,6 +1,7 @@
 import ARNetworking
 import Foundation
 
+@MainActor
 class RepositoryDetailsViewModel: ObservableObject {
     @Published var commits = [Commit]()
     @Published var showError = false
@@ -39,15 +40,11 @@ extension RepositoryDetailsViewModel {
                 let commits = try await request(NetworkUtils.mapResults)
                 appManager.updateLoading(false)
 
-                DispatchQueue.main.async { [weak self] in
-                    self?.commits = commits
-                }
+                self.commits = commits
             } catch let error as NSError {
                 appManager.updateLoading(false)
 
-                DispatchQueue.main.async { [weak self] in
-                    self?.error = error
-                }
+                self.error = error
             }
         }
     }

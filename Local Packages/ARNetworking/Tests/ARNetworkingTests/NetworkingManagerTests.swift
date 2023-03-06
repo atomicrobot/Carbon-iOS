@@ -120,12 +120,12 @@ final class NetworkingManagerTests: XCTestCase {
     }
 
     func testFetchCommitDetailsSuccess() async throws {
-        MockURLProtocol.requestErrorMode = success
+        MockURLProtocol.requestErrorMode = .success
         let result = await networkingManager.fetchCommitDetails(commitUrl: "https://api.github.com/repos/atomicrobot/CarbonAndroid/git/commits/thisisafakecommit")
 
         switch result {
         case .success(let data):
-            let commit = try TestJSONDecoder().decode(CommitD, from: data)
+            let commit = try TestJSONDecoder().decode(CommitDetails.self, from: data)
             XCTAssertNotNil(commit)
         case .failure:
             XCTFail()

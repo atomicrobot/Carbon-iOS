@@ -1,7 +1,8 @@
 import ARNetworking
 import Foundation
 
-class CommitDetailsViewModel: ObservableObject {
+@MainActor
+final class CommitDetailsViewModel: ObservableObject {
     @Published var commit: CommitDetails?
     @Published var showError = false
 
@@ -36,15 +37,11 @@ extension CommitDetailsViewModel {
                 let commitDetails = try await request(NetworkUtils.mapResults)
                 appManager.updateLoading(false)
 
-                DispatchQueue.main.async { [weak self] in
-                    self?.commit = commitDetails
-                }
+                self.commit = commitDetails
             } catch {
                 appManager.updateLoading(false)
 
-                DispatchQueue.main.async { [weak self] in
-                    self?.error = error
-                }
+                self.error = error
             }
         }
     }
