@@ -31,12 +31,14 @@ public struct RepositoryList: View {
         _ item: RepostioryListDataItem
     ) -> some View
     {
-        VStack(alignment: .leading, spacing: 4) {
-            Text(item.name)
-                .applyTheme(.title2)
-            
-            Text(item.description)
-                .applyTheme(.footnote)
+        NavigationLink(value: ARRepoViews.commitsList(item.urlPath)) {
+            VStack(alignment: .leading, spacing: 4) {
+                Text(item.name)
+                    .applyTheme(.title2)
+                
+                Text(item.description)
+                    .applyTheme(.footnote)
+            }
         }
     }
 }
@@ -77,15 +79,18 @@ extension RepositoryList {
 public struct RepostioryListDataItem: Identifiable {
     public init(
         name: String,
-        description: String?
+        description: String?,
+        urlPath: String
     )
     {
         self.description = description ?? ""
         self.name        = name
+        self.urlPath     = urlPath
     }
     
     let name: String
     let description: String
+    let urlPath: String
     
     public var id: String { name + description }
 }
@@ -95,7 +100,8 @@ struct RepositoryList_Previews: PreviewProvider {
         RepositoryList(onLoad: { [
             RepostioryListDataItem(
                 name: "Carbon-iOS",
-                description: "A sample project."
+                description: "A sample project.",
+                urlPath: ""
             )
         ] })
     }

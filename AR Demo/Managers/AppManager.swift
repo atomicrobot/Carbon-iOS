@@ -49,9 +49,8 @@ class AppManager: AppManagerProtocol, ObservableObject {
     ) async throws -> T
     {
         send(state: .busy)
-        let result = try await request(mapper)
-        send(state: .idle)
-        return result
+        defer { send(state: .idle) }
+        return try await request(mapper)
     }
 }
 
@@ -60,6 +59,16 @@ extension AppManager {
         networkManager.prepareFetchRespositories(
             forOrganization: Constants.gitHubOrganization,
             toType: [Repository].self
+        )
+    }
+    
+    func commitsRequest(
+        for path: String
+    ) -> ((Result<Data, Error>) throws -> [Commit]) async throws -> [Commit]
+    {
+        networkManager.prepareFetchCommits(
+            with: path,
+            toType: [Commit].self
         )
     }
 }

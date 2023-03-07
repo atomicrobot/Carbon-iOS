@@ -27,6 +27,16 @@ extension ARTextTheme {
         foregroundColor: ColorResource.textOne
     )
     
+    static var monospacedRegular: ARTextTheme = ARTextTheme(
+        font: .system(.footnote, design: .monospaced, weight: .semibold),
+        foregroundColor: ColorResource.textOne
+    )
+    
+    static var subheadline: ARTextTheme = ARTextTheme(
+        font: .subheadline,
+        foregroundColor: ColorResource.textOne
+    )
+    
     static var title2: ARTextTheme = ARTextTheme(
         font: .title2,
         foregroundColor: ColorResource.textOne
