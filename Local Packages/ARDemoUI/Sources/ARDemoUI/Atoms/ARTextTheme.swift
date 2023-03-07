@@ -17,8 +17,18 @@ extension View {
 }
 
 extension ARTextTheme {
+    static var footnote: ARTextTheme = ARTextTheme(
+        font: .footnote,
+        foregroundColor: ColorResource.textOne
+    )
+    
     static var largeTitle: ARTextTheme = ARTextTheme(
         font: .system(size: 36, weight: .heavy, design: .monospaced),
+        foregroundColor: ColorResource.textOne
+    )
+    
+    static var title2: ARTextTheme = ARTextTheme(
+        font: .title2,
         foregroundColor: ColorResource.textOne
     )
 }

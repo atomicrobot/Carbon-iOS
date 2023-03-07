@@ -35,15 +35,15 @@ extension RepositoryDetailsViewModel {
         let request = networkingManager.prepareFetchCommits(with: repository.commitsUrl, toType: [Commit].self)
         Task {
             do {
-                appManager.updateLoading(true)
+                appManager.send(state: .busy)
                 let commits = try await request(NetworkUtils.mapResults)
-                appManager.updateLoading(false)
+                appManager.send(state: .idle)
 
                 DispatchQueue.main.async { [weak self] in
                     self?.commits = commits
                 }
             } catch let error as NSError {
-                appManager.updateLoading(false)
+                appManager.send(state: .idle)
 
                 DispatchQueue.main.async { [weak self] in
                     self?.error = error

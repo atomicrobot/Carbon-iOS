@@ -30,15 +30,15 @@ extension RepositoryListViewModel {
         let request = networkingManager.prepareFetchRespositories(forOrganization: Constants.gitHubOrganization, toType: [Repository].self)
         Task {
             do {
-                appManager.updateLoading(true)
+                appManager.send(state: .busy)
                 let repositories = try await request(NetworkUtils.mapResults)
-                appManager.updateLoading(false)
+                appManager.send(state: .idle)
 
                 DispatchQueue.main.async { [weak self] in
                     self?.repositories = repositories
                 }
             } catch let error as NSError {
-                appManager.updateLoading(false)
+                appManager.send(state: .idle)
 
                 DispatchQueue.main.async { [weak self] in
                     self?.error = error

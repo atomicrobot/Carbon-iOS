@@ -32,15 +32,15 @@ extension CommitDetailsViewModel {
         let request = networkingManager.prepareFetchCommitDetails(with: commit.commit.url, toType: CommitDetails.self)
         Task {
             do {
-                appManager.updateLoading(true)
+                appManager.send(state: .busy)
                 let commitDetails = try await request(NetworkUtils.mapResults)
-                appManager.updateLoading(false)
+                appManager.send(state: .idle)
 
                 DispatchQueue.main.async { [weak self] in
                     self?.commit = commitDetails
                 }
             } catch {
-                appManager.updateLoading(false)
+                appManager.send(state: .idle)
 
                 DispatchQueue.main.async { [weak self] in
                     self?.error = error
