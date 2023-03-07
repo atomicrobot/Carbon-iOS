@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		263A331229A7C4D5007BCDE0 /* ARNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 263A331129A7C4D5007BCDE0 /* ARNetworking */; };
+		26E9ADA229B6E4FD00AB2089 /* ARDemoUI in Frameworks */ = {isa = PBXBuildFile; productRef = 26E9ADA129B6E4FD00AB2089 /* ARDemoUI */; };
 		AB0F9F8A26DF8435007D736E /* AR_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F9F8926DF8435007D736E /* AR_DemoApp.swift */; };
 		AB0F9F8C26DF8435007D736E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F9F8B26DF8435007D736E /* ContentView.swift */; };
 		AB0F9F8E26DF8438007D736E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB0F9F8D26DF8438007D736E /* Assets.xcassets */; };
@@ -21,7 +22,6 @@
 		AB0F9FC126DF967F007D736E /* RepositoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F9FC026DF967F007D736E /* RepositoryRow.swift */; };
 		AB0F9FC326DF9D65007D736E /* RepositoryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F9FC226DF9D65007D736E /* RepositoryDetails.swift */; };
 		AB0F9FC526DF9E96007D736E /* RepositoryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F9FC426DF9E96007D736E /* RepositoryDetailsViewModel.swift */; };
-		AB0F9FC726DF9F51007D736E /* LoaderHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F9FC626DF9F51007D736E /* LoaderHUD.swift */; };
 		ABE8E76526DFA4A400FFF660 /* CommitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E76426DFA4A400FFF660 /* CommitModel.swift */; };
 		ABE8E76726DFB45B00FFF660 /* CollaboratorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E76626DFB45B00FFF660 /* CollaboratorModel.swift */; };
 		ABE8E76A26DFB63B00FFF660 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E76926DFB63B00FFF660 /* AppManager.swift */; };
@@ -59,7 +59,7 @@
 
 /* Begin PBXFileReference section */
 		263A331029A7B9D8007BCDE0 /* ARNetworking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ARNetworking; path = "Local Packages/ARNetworking"; sourceTree = "<group>"; };
-		2666B6C629B6DD960049CBFC /* ARDemoUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ARDemoUI; path = ../../../Desktop/ARDemoUI; sourceTree = "<group>"; };
+		26E9ADA029B6E4EE00AB2089 /* ARDemoUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ARDemoUI; path = "Local Packages/ARDemoUI"; sourceTree = "<group>"; };
 		AB0F9F8626DF8435007D736E /* AR Demo (dev).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Demo (dev).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB0F9F8926DF8435007D736E /* AR_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AR_DemoApp.swift; sourceTree = "<group>"; };
 		AB0F9F8B26DF8435007D736E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,7 +76,6 @@
 		AB0F9FC026DF967F007D736E /* RepositoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRow.swift; sourceTree = "<group>"; };
 		AB0F9FC226DF9D65007D736E /* RepositoryDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetails.swift; sourceTree = "<group>"; };
 		AB0F9FC426DF9E96007D736E /* RepositoryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsViewModel.swift; sourceTree = "<group>"; };
-		AB0F9FC626DF9F51007D736E /* LoaderHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderHUD.swift; sourceTree = "<group>"; };
 		AB58FC8926EB7C3E008B798C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		ABE8E76426DFA4A400FFF660 /* CommitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitModel.swift; sourceTree = "<group>"; };
 		ABE8E76626DFB45B00FFF660 /* CollaboratorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaboratorModel.swift; sourceTree = "<group>"; };
@@ -105,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26E9ADA229B6E4FD00AB2089 /* ARDemoUI in Frameworks */,
 				263A331229A7C4D5007BCDE0 /* ARNetworking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,7 +129,6 @@
 		263A330C29A7B6DF007BCDE0 /* Local Packages */ = {
 			isa = PBXGroup;
 			children = (
-				2666B6C629B6DD960049CBFC /* ARDemoUI */,
 				263A331029A7B9D8007BCDE0 /* ARNetworking */,
 			);
 			name = "Local Packages";
@@ -142,9 +141,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		26E9AD9F29B6E4EE00AB2089 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				26E9ADA029B6E4EE00AB2089 /* ARDemoUI */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		AB0F9F7D26DF8435007D736E = {
 			isa = PBXGroup;
 			children = (
+				26E9AD9F29B6E4EE00AB2089 /* Packages */,
 				263A330C29A7B6DF007BCDE0 /* Local Packages */,
 				AB0F9F8826DF8435007D736E /* AR Demo */,
 				AB0F9F9926DF8438007D736E /* AR DemoTests */,
@@ -215,7 +223,6 @@
 			children = (
 				ABE8E76B26DFBB2900FFF660 /* CommitDetails.swift */,
 				ABE8E81D26E9329800FFF660 /* InfoView.swift */,
-				AB0F9FC626DF9F51007D736E /* LoaderHUD.swift */,
 				AB0F9FC226DF9D65007D736E /* RepositoryDetails.swift */,
 				AB0F9FB426DF854E007D736E /* RepositoryList.swift */,
 				AB0F9FC026DF967F007D736E /* RepositoryRow.swift */,
@@ -318,6 +325,7 @@
 			name = "AR Demo";
 			packageProductDependencies = (
 				263A331129A7C4D5007BCDE0 /* ARNetworking */,
+				26E9ADA129B6E4FD00AB2089 /* ARDemoUI */,
 			);
 			productName = "AR Demo";
 			productReference = AB0F9F8626DF8435007D736E /* AR Demo (dev).app */;
@@ -446,7 +454,6 @@
 				ABE8E81E26E9329800FFF660 /* InfoView.swift in Sources */,
 				AB0F9FBD26DF8D2F007D736E /* RepositoryModel.swift in Sources */,
 				ABE8E76A26DFB63B00FFF660 /* AppManager.swift in Sources */,
-				AB0F9FC726DF9F51007D736E /* LoaderHUD.swift in Sources */,
 				ABE8E76526DFA4A400FFF660 /* CommitModel.swift in Sources */,
 				ABE8E76E26DFBC0100FFF660 /* CommitDetailsModel.swift in Sources */,
 				AB0F9FC326DF9D65007D736E /* RepositoryDetails.swift in Sources */,
@@ -971,6 +978,10 @@
 		263A331129A7C4D5007BCDE0 /* ARNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ARNetworking;
+		};
+		26E9ADA129B6E4FD00AB2089 /* ARDemoUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ARDemoUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

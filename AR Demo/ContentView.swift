@@ -1,3 +1,4 @@
+import ARDemoUI
 import SwiftUI
 
 struct ContentView: View {
@@ -6,7 +7,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             if appManager.isLoading {
-                LoaderHUDView()
+                LoaderHUD(localizer: loaderLocalizer(_:))
                     .zIndex(1)
             }
 
@@ -31,8 +32,21 @@ struct ContentView: View {
     }
 }
 
+extension ContentView {
+    private func loaderLocalizer(_ key: LoaderHUD.Key) -> String {
+        switch key {
+        case .title:
+            return NSLocalizedString(
+                "loading",
+                comment: "Loading HUD"
+            )
+        }
+    }
+}
+
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(AppManager.sharedInstance)
     }
 }
