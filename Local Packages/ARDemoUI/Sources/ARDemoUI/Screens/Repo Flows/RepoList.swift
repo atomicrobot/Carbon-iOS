@@ -1,6 +1,6 @@
 import SwiftUI
 
-public struct RepositoryList: View {
+public struct RepoList: View {
     public init(
         onLoad: @escaping () async throws -> [RepostioryListDataItem],
         localizer: @escaping (Key) -> String = { String(describing: $0) }
@@ -43,7 +43,7 @@ public struct RepositoryList: View {
     }
 }
 
-extension RepositoryList {
+extension RepoList {
     public enum Key {
         case errorMessage
         case errorOK
@@ -95,9 +95,9 @@ public struct RepostioryListDataItem: Identifiable {
     public var id: String { name + description }
 }
 
-struct RepositoryList_Previews: PreviewProvider {
+struct RepoList_Previews: PreviewProvider {
     static var previews: some View {
-        RepositoryList(onLoad: { [
+        RepoList(onLoad: { [
             RepostioryListDataItem(
                 name: "Carbon-iOS",
                 description: "A sample project.",

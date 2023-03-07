@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		263A331229A7C4D5007BCDE0 /* ARNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 263A331129A7C4D5007BCDE0 /* ARNetworking */; };
+		26C95AB329B78F2400058B8E /* Localizers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C95AB229B78F2400058B8E /* Localizers.swift */; };
 		26E9ADA229B6E4FD00AB2089 /* ARDemoUI in Frameworks */ = {isa = PBXBuildFile; productRef = 26E9ADA129B6E4FD00AB2089 /* ARDemoUI */; };
 		AB0F9F8A26DF8435007D736E /* AR_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F9F8926DF8435007D736E /* AR_DemoApp.swift */; };
 		AB0F9F8C26DF8435007D736E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F9F8B26DF8435007D736E /* ContentView.swift */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		263A331029A7B9D8007BCDE0 /* ARNetworking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ARNetworking; path = "Local Packages/ARNetworking"; sourceTree = "<group>"; };
+		26C95AB229B78F2400058B8E /* Localizers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizers.swift; sourceTree = "<group>"; };
 		26E9ADA029B6E4EE00AB2089 /* ARDemoUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ARDemoUI; path = "Local Packages/ARDemoUI"; sourceTree = "<group>"; };
 		AB0F9F8626DF8435007D736E /* AR Demo (dev).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Demo (dev).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB0F9F8926DF8435007D736E /* AR_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AR_DemoApp.swift; sourceTree = "<group>"; };
@@ -125,6 +127,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		26C95AB129B78EF500058B8E /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				ABE8E7BA26E0EE0E00FFF660 /* en.lproj */,
+				26C95AB229B78F2400058B8E /* Localizers.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		26E9AD9F29B6E4EE00AB2089 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +170,7 @@
 		AB0F9F8826DF8435007D736E /* AR Demo */ = {
 			isa = PBXGroup;
 			children = (
+				26C95AB129B78EF500058B8E /* Localization */,
 				AB0F9F8926DF8435007D736E /* AR_DemoApp.swift */,
 				ABE8E81026E91A7700FFF660 /* Config */,
 				AB0F9FB926DF8675007D736E /* Constants.swift */,
@@ -224,7 +236,6 @@
 		ABE8E7B926E0EE0000FFF660 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				ABE8E7BA26E0EE0E00FFF660 /* en.lproj */,
 				AB0F9F8D26DF8438007D736E /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -402,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26C95AB329B78F2400058B8E /* Localizers.swift in Sources */,
 				ABE8E7C026E0EF3300FFF660 /* AppUtils.swift in Sources */,
 				AB0F9FBA26DF8675007D736E /* Constants.swift in Sources */,
 				ABE8E7C426E12AC500FFF660 /* GitHubApiJSONDecoder.swift in Sources */,

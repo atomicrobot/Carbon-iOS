@@ -16,23 +16,23 @@ struct ContentView: View {
         TabView {
             ZStack {
                 NavigationStack(path: $model.views) {
-                    RepositoryList(
+                    RepoList(
                         onLoad: model.loadRepositories,
-                        localizer: repositoriesListLocalizer(_:)
+                        localizer: Localizers.repositoriesListLocalizer(_:)
                     )
                     .navigationDestination(for: ARRepoViews.self) { view in
                         switch view {
                         case .commitsList(let path):
-                            CommitsList(
+                            RepoCommits(
                                 urlPath: path,
                                 onLoad: model.loadCommits(urlPath:),
-                                localizer: commitsListLocalizer(_:)
+                                localizer: Localizers.commitsListLocalizer(_:)
                             )
                             
                         case .commitDetail(let path):
-                            CommitDetailView(
+                            RepoCommitDetail(
                                 urlPath: path,
-                                localizer: commitDetailViewLocalizer(_:),
+                                localizer: Localizers.commitDetailViewLocalizer(_:),
                                 onLoad: model.loadCommit(urlPath:)
                             )
                         }
@@ -40,7 +40,7 @@ struct ContentView: View {
                 }
                 
                 if model.state == .busy {
-                    LoaderHUD(localizer: loaderLocalizer(_:))
+                    LoaderHUD(localizer: Localizers.loaderLocalizer(_:))
                 }
             }
             .tabItem {
@@ -59,93 +59,6 @@ struct ContentView: View {
                 Image(systemName: "info.circle")
                 Text.localized(for: "tab_info")
             }
-        }
-    }
-}
-
-// MARK: Localization
-extension ContentView {
-    private func loaderLocalizer(_ key: LoaderHUD.Key) -> String {
-        switch key {
-        case .title:
-            return NSLocalizedString(
-                "loading",
-                comment: "Loading HUD"
-            )
-        }
-    }
-    
-    private func repositoriesListLocalizer(_ key: RepositoryList.Key) -> String {
-        switch key {
-        case .errorMessage:
-            return NSLocalizedString(
-                "repository_list_error_description",
-                comment: "Repository List Error Message"
-            )
-            
-        case .errorOK:
-            return NSLocalizedString(
-                "ok",
-                comment: "Repository List Error Ok Button Title"
-            )
-            
-        case .errorTitle:
-            return NSLocalizedString(
-                "repository_list_error_title",
-                comment: "Repository List Error Title"
-            )
-            
-        }
-    }
-    
-    private func commitsListLocalizer(_ key: CommitsList.Key) -> String {
-        switch key {
-        case .errorMessage:
-            return NSLocalizedString(
-                "repository_list_error_description",
-                comment: "Commits List Error Message"
-            )
-            
-        case .errorOK:
-            return NSLocalizedString(
-                "ok",
-                comment: "Commits List Error Ok Button Title"
-            )
-            
-        case .errorTitle:
-            return NSLocalizedString(
-                "repository_list_error_title",
-                comment: "Commits List Error Title"
-            )
-            
-        }
-    }
-    
-    private func commitDetailViewLocalizer(_ key: CommitDetailView.Key) -> String {
-        switch key {
-        case .author:
-            return NSLocalizedString(
-                "commit_author",
-                comment: "Commit Detial Author"
-            )
-            
-        case .date:
-            return NSLocalizedString(
-                "commit_date",
-                comment: "Commit Detial Date"
-            )
-            
-        case .message:
-            return NSLocalizedString(
-                "commit_message",
-                comment: "Commit Detial Message"
-            )
-            
-        case .title:
-            return NSLocalizedString(
-                "commit_details_title",
-                comment: "Commit Detial Title"
-            )
         }
     }
 }

@@ -50,9 +50,9 @@ public struct AppInfoItem {
         bundleID: String
     )
     {
-        self.appName = appName
+        self.appName    = appName
         self.appVersion = appVersion
-        self.bundleID = bundleID
+        self.bundleID   = bundleID
     }
     
     let appName: String

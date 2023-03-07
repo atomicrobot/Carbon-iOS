@@ -1,14 +1,14 @@
 import SwiftUI
 
-public struct CommitsList: View {
+public struct RepoCommits: View {
     public init(
         urlPath: String,
         onLoad: @escaping (String) async throws -> [CommitsListDataItem],
         localizer: @escaping (Key) -> String = { String(describing: $0) }
     )
     {
-        self.localizer = localizer
-        self._model = StateObject(wrappedValue: Model(urlPath: urlPath, onLoad: onLoad))
+        self.localizer  = localizer
+        self._model     = StateObject(wrappedValue: Model(urlPath: urlPath, onLoad: onLoad))
     }
     
     // MARK: Properties
@@ -30,24 +30,23 @@ public struct CommitsList: View {
     @ViewBuilder
     private func commitRowContent(_ data: CommitsListDataItem) -> some View {
         NavigationLink(value: ARRepoViews.commitDetail(data.urlPath)) {
-            VStack(alignment: .leading, spacing: 4) {
-                Text(data.sha)
-                    .applyTheme(.monospacedRegular)
-                    .lineLimit(1)
-                    .allowsTightening(true)
-                    .minimumScaleFactor(0.5)
-                
-                Text(data.message)
-                    .applyTheme(.subheadline)
-                    .lineLimit(2)
-                    .truncationMode(.middle)
-            }
+            Text(data.sha)
+                .applyTheme(.monospacedRegular)
+                .lineLimit(1)
+                .allowsTightening(true)
+                .minimumScaleFactor(0.5)
+                .verticalGroup(spacing: 4) {
+                    Text(data.message)
+                        .applyTheme(.subheadline)
+                        .lineLimit(2)
+                        .truncationMode(.middle)
+                }
         }
     }
 }
 
 // MARK: Data Models
-extension CommitsList {
+extension RepoCommits {
     public enum Key {
         case errorMessage
         case errorOK
@@ -61,8 +60,8 @@ extension CommitsList {
             onLoad: @escaping (String) async throws -> [CommitsListDataItem]
         )
         {
-            self.onLoad = onLoad
-            self.urlPath = urlPath
+            self.onLoad     = onLoad
+            self.urlPath    = urlPath
         }
         
         // MARK: Properties
@@ -80,9 +79,9 @@ extension CommitsList {
     }
 }
 
-struct CommitsList_Previews: PreviewProvider {
+struct RepoCommits_Previews: PreviewProvider {
     static var previews: some View {
-        CommitsList(
+        RepoCommits(
             urlPath: "",
             onLoad: { _ in [
                 CommitsListDataItem(
@@ -102,9 +101,9 @@ public struct CommitsListDataItem: Identifiable {
         urlPath: String
     )
     {
-        self.message = message
-        self.sha = sha
-        self.urlPath = urlPath
+        self.message    = message
+        self.sha        = sha
+        self.urlPath    = urlPath
     }
     
     let sha: String
