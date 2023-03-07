@@ -30,7 +30,6 @@
 		ABE8E80A26E2347000FFF660 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E80926E2347000FFF660 /* NetworkUtils.swift */; };
 		ABE8E80D26E7D3F900FFF660 /* Text+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E80C26E7D3F900FFF660 /* Text+Extensions.swift */; };
 		ABE8E81A26E91EF200FFF660 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E81926E91EF200FFF660 /* Config.swift */; };
-		ABE8E81E26E9329800FFF660 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E81D26E9329800FFF660 /* InfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +81,6 @@
 		ABE8E81326E91C1900FFF660 /* Beta.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Beta.xcconfig; sourceTree = "<group>"; };
 		ABE8E81426E91C2C00FFF660 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
 		ABE8E81926E91EF200FFF660 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		ABE8E81D26E9329800FFF660 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +169,6 @@
 				AB0F9F8F26DF8438007D736E /* Preview Content */,
 				ABE8E7B926E0EE0000FFF660 /* Resources */,
 				ABE8E7BE26E0EF1400FFF660 /* Utils */,
-				AB0F9FB326DF847A007D736E /* Views */,
 			);
 			path = "AR Demo";
 			sourceTree = "<group>";
@@ -201,14 +198,6 @@
 				AB0F9FA626DF8438007D736E /* AR_DemoUITestsLaunchTests.swift */,
 			);
 			path = "AR DemoUITests";
-			sourceTree = "<group>";
-		};
-		AB0F9FB326DF847A007D736E /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				ABE8E81D26E9329800FFF660 /* InfoView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		AB0F9FBB26DF8D22007D736E /* Models */ = {
@@ -419,7 +408,6 @@
 				ABE8E80D26E7D3F900FFF660 /* Text+Extensions.swift in Sources */,
 				ABE8E76726DFB45B00FFF660 /* CollaboratorModel.swift in Sources */,
 				AB0F9F8C26DF8435007D736E /* ContentView.swift in Sources */,
-				ABE8E81E26E9329800FFF660 /* InfoView.swift in Sources */,
 				AB0F9FBD26DF8D2F007D736E /* RepositoryModel.swift in Sources */,
 				ABE8E76A26DFB63B00FFF660 /* AppManager.swift in Sources */,
 				ABE8E76526DFA4A400FFF660 /* CommitModel.swift in Sources */,

@@ -49,7 +49,11 @@ struct ContentView: View {
             }
             
             VStack {
-                InfoView()
+                AppInfo(item: AppInfoItem(
+                    appName: Config.appName,
+                    appVersion: Config.versionInfo,
+                    bundleID: Config.bundleId
+                ))
             }
             .tabItem {
                 Image(systemName: "info.circle")
