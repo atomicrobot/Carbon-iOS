@@ -59,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		263A331029A7B9D8007BCDE0 /* ARNetworking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ARNetworking; path = "Local Packages/ARNetworking"; sourceTree = "<group>"; };
+		2666B6C629B6DD960049CBFC /* ARDemoUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ARDemoUI; path = ../../../Desktop/ARDemoUI; sourceTree = "<group>"; };
 		AB0F9F8626DF8435007D736E /* AR Demo (dev).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Demo (dev).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB0F9F8926DF8435007D736E /* AR_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AR_DemoApp.swift; sourceTree = "<group>"; };
 		AB0F9F8B26DF8435007D736E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -128,6 +129,7 @@
 		263A330C29A7B6DF007BCDE0 /* Local Packages */ = {
 			isa = PBXGroup;
 			children = (
+				2666B6C629B6DD960049CBFC /* ARDemoUI */,
 				263A331029A7B9D8007BCDE0 /* ARNetworking */,
 			);
 			name = "Local Packages";
