@@ -1,6 +1,47 @@
 import SwiftUI
 
 public struct RepositoryList: View {
+    public init(
+        onLoad: @escaping () async throws -> [RepostioryListDataItem],
+        localizer: @escaping (Key) -> String = { String(describing: $0) }
+    )
+    {
+        self.localizer = localizer
+        self._model = StateObject(wrappedValue: Model(onLoad: onLoad))
+    }
+    
+    // MARK: Properties
+    @StateObject private var model: Model
+    
+    private var localizer: (Key) -> String
+    
+    public var body: some View {
+        List(model.items, rowContent: rowContent(_:))
+            .task { await model.loadItems() }
+            .alert(
+                localizer(.errorTitle),
+                isPresented: $model.showError,
+                actions: { Text(localizer(.errorOK)) },
+                message: { Text(localizer(.errorMessage)) }
+            )
+    }
+    
+    @ViewBuilder
+    private func rowContent(
+        _ item: RepostioryListDataItem
+    ) -> some View
+    {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(item.name)
+                .applyTheme(.title2)
+            
+            Text(item.description)
+                .applyTheme(.footnote)
+        }
+    }
+}
+
+extension RepositoryList {
     public enum Key {
         case errorMessage
         case errorOK
@@ -29,47 +70,6 @@ public struct RepositoryList: View {
         func loadItems() async {
             do { items = try await onLoad() }
             catch { showError = true }
-        }
-    }
-    
-    public init(
-        onLoad: @escaping () async throws -> [RepostioryListDataItem],
-        localizer: @escaping (Key) -> String = { String(describing: $0) }
-    )
-    {
-        self.localizer = localizer
-        self._model = StateObject(wrappedValue: Model(onLoad: onLoad))
-    }
-    
-    // MARK: Properties
-    @StateObject private var model: Model
-    
-    private var localizer: (Key) -> String
-    
-    public var body: some View {
-        List(model.items, rowContent: rowContent(_:))
-            .task { await model.loadItems() }
-            .alert(
-                localizer(.errorTitle),
-                isPresented: $model.showError,
-                actions: { Text(localizer(.errorOK)) },
-                message: { Text(localizer(.errorMessage)) }
-            )
-    }
-}
-
-extension RepositoryList {
-    @ViewBuilder
-    private func rowContent(
-        _ item: RepostioryListDataItem
-    ) -> some View
-    {
-        VStack(alignment: .leading, spacing: 4) {
-            Text(item.name)
-                .applyTheme(.title2)
-            
-            Text(item.description)
-                .applyTheme(.footnote)
         }
     }
 }
