@@ -28,6 +28,13 @@ struct ContentView: View {
                                 onLoad: model.loadCommits(urlPath:),
                                 localizer: commitsListLocalizer(_:)
                             )
+                            
+                        case .commitDetail(let path):
+                            CommitDetailView(
+                                urlPath: path,
+                                localizer: commitDetailViewLocalizer(_:),
+                                onLoad: model.loadCommit(urlPath:)
+                            )
                         }
                     }
                 }
@@ -92,21 +99,49 @@ extension ContentView {
         case .errorMessage:
             return NSLocalizedString(
                 "repository_list_error_description",
-                comment: "Repository List Error Message"
+                comment: "Commits List Error Message"
             )
             
         case .errorOK:
             return NSLocalizedString(
                 "ok",
-                comment: "Repository List Error Ok Button Title"
+                comment: "Commits List Error Ok Button Title"
             )
             
         case .errorTitle:
             return NSLocalizedString(
                 "repository_list_error_title",
-                comment: "Repository List Error Title"
+                comment: "Commits List Error Title"
             )
             
+        }
+    }
+    
+    private func commitDetailViewLocalizer(_ key: CommitDetailView.Key) -> String {
+        switch key {
+        case .author:
+            return NSLocalizedString(
+                "commit_author",
+                comment: "Commit Detial Author"
+            )
+            
+        case .date:
+            return NSLocalizedString(
+                "commit_date",
+                comment: "Commit Detial Date"
+            )
+            
+        case .message:
+            return NSLocalizedString(
+                "commit_message",
+                comment: "Commit Detial Message"
+            )
+            
+        case .title:
+            return NSLocalizedString(
+                "commit_details_title",
+                comment: "Commit Detial Title"
+            )
         }
     }
 }
@@ -147,6 +182,14 @@ extension ContentView {
             )
             .map(CommitsListDataItem.init)
         }
+        
+        func loadCommit(urlPath: String) async throws -> CommitDetailItem {
+            try await appManager.performRequest(
+                request: appManager.commitRequest(for: urlPath),
+                mapper: NetworkUtils.mapResults
+            )
+            .map(CommitDetailItem.init)
+        }
     }
 }
 
@@ -177,7 +220,28 @@ private extension CommitsListDataItem {
     {
         self.init(
             sha: commit.sha,
-            message: commit.commit.message
+            message: commit.commit.message,
+            urlPath: commit.commit.url
+        )
+    }
+}
+
+private extension CommitDetails {
+    func map<T>(_ transform: (Self) -> T) -> T {
+        transform(self)
+    }
+}
+
+private extension CommitDetailItem {
+    init(
+        commitDetails: CommitDetails
+    )
+    {
+        self.init(
+            author: commitDetails.committer.name,
+            date: commitDetails.committer.date,
+            message: commitDetails.message,
+            sha: commitDetails.sha ?? ""
         )
     }
 }

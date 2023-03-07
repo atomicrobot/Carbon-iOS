@@ -20,9 +20,7 @@
 		ABE8E76526DFA4A400FFF660 /* CommitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E76426DFA4A400FFF660 /* CommitModel.swift */; };
 		ABE8E76726DFB45B00FFF660 /* CollaboratorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E76626DFB45B00FFF660 /* CollaboratorModel.swift */; };
 		ABE8E76A26DFB63B00FFF660 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E76926DFB63B00FFF660 /* AppManager.swift */; };
-		ABE8E76C26DFBB2900FFF660 /* CommitDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E76B26DFBB2900FFF660 /* CommitDetails.swift */; };
 		ABE8E76E26DFBC0100FFF660 /* CommitDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E76D26DFBC0100FFF660 /* CommitDetailsModel.swift */; };
-		ABE8E77026DFCC5300FFF660 /* CommitDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E76F26DFCC5300FFF660 /* CommitDetailsViewModel.swift */; };
 		ABE8E77226DFD38800FFF660 /* CollaboratorStubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E77126DFD38800FFF660 /* CollaboratorStubModel.swift */; };
 		ABE8E77626DFED7000FFF660 /* AppManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE8E77526DFED7000FFF660 /* AppManagerTests.swift */; };
 		ABE8E7BD26E0EE2300FFF660 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ABE8E7BB26E0EE2300FFF660 /* Localizable.strings */; };
@@ -70,9 +68,7 @@
 		ABE8E76426DFA4A400FFF660 /* CommitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitModel.swift; sourceTree = "<group>"; };
 		ABE8E76626DFB45B00FFF660 /* CollaboratorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaboratorModel.swift; sourceTree = "<group>"; };
 		ABE8E76926DFB63B00FFF660 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
-		ABE8E76B26DFBB2900FFF660 /* CommitDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitDetails.swift; sourceTree = "<group>"; };
 		ABE8E76D26DFBC0100FFF660 /* CommitDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitDetailsModel.swift; sourceTree = "<group>"; };
-		ABE8E76F26DFCC5300FFF660 /* CommitDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitDetailsViewModel.swift; sourceTree = "<group>"; };
 		ABE8E77126DFD38800FFF660 /* CollaboratorStubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaboratorStubModel.swift; sourceTree = "<group>"; };
 		ABE8E77526DFED7000FFF660 /* AppManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManagerTests.swift; sourceTree = "<group>"; };
 		ABE8E7BC26E0EE2300FFF660 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
@@ -175,7 +171,6 @@
 				AB0F9F8F26DF8438007D736E /* Preview Content */,
 				ABE8E7B926E0EE0000FFF660 /* Resources */,
 				ABE8E7BE26E0EF1400FFF660 /* Utils */,
-				AB0F9FB626DF8573007D736E /* View Models */,
 				AB0F9FB326DF847A007D736E /* Views */,
 			);
 			path = "AR Demo";
@@ -211,18 +206,9 @@
 		AB0F9FB326DF847A007D736E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				ABE8E76B26DFBB2900FFF660 /* CommitDetails.swift */,
 				ABE8E81D26E9329800FFF660 /* InfoView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		AB0F9FB626DF8573007D736E /* View Models */ = {
-			isa = PBXGroup;
-			children = (
-				ABE8E76F26DFCC5300FFF660 /* CommitDetailsViewModel.swift */,
-			);
-			path = "View Models";
 			sourceTree = "<group>";
 		};
 		AB0F9FBB26DF8D22007D736E /* Models */ = {
@@ -431,7 +417,6 @@
 				AB0F9FBA26DF8675007D736E /* Constants.swift in Sources */,
 				ABE8E7C426E12AC500FFF660 /* GitHubApiJSONDecoder.swift in Sources */,
 				ABE8E80D26E7D3F900FFF660 /* Text+Extensions.swift in Sources */,
-				ABE8E77026DFCC5300FFF660 /* CommitDetailsViewModel.swift in Sources */,
 				ABE8E76726DFB45B00FFF660 /* CollaboratorModel.swift in Sources */,
 				AB0F9F8C26DF8435007D736E /* ContentView.swift in Sources */,
 				ABE8E81E26E9329800FFF660 /* InfoView.swift in Sources */,
@@ -443,7 +428,6 @@
 				ABE8E81A26E91EF200FFF660 /* Config.swift in Sources */,
 				AB0F9F8A26DF8435007D736E /* AR_DemoApp.swift in Sources */,
 				ABE8E80A26E2347000FFF660 /* NetworkUtils.swift in Sources */,
-				ABE8E76C26DFBB2900FFF660 /* CommitDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

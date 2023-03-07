@@ -29,17 +29,19 @@ public struct CommitsList: View {
     
     @ViewBuilder
     private func commitRowContent(_ data: CommitsListDataItem) -> some View {
-        VStack(alignment: .leading, spacing: 4) {
-            Text(data.sha)
-                .applyTheme(.monospacedRegular)
-                .lineLimit(1)
-                .allowsTightening(true)
-                .minimumScaleFactor(0.5)
-            
-            Text(data.message)
-                .applyTheme(.subheadline)
-                .lineLimit(2)
-                .truncationMode(.middle)
+        NavigationLink(value: ARRepoViews.commitDetail(data.urlPath)) {
+            VStack(alignment: .leading, spacing: 4) {
+                Text(data.sha)
+                    .applyTheme(.monospacedRegular)
+                    .lineLimit(1)
+                    .allowsTightening(true)
+                    .minimumScaleFactor(0.5)
+                
+                Text(data.message)
+                    .applyTheme(.subheadline)
+                    .lineLimit(2)
+                    .truncationMode(.middle)
+            }
         }
     }
 }
@@ -85,7 +87,8 @@ struct CommitsList_Previews: PreviewProvider {
             onLoad: { _ in [
                 CommitsListDataItem(
                     sha: UUID().uuidString,
-                    message: "This is one of the coolest commits eva."
+                    message: "This is one of the coolest commits eva.",
+                    urlPath: ""
                 )
             ]}
         )
@@ -95,15 +98,18 @@ struct CommitsList_Previews: PreviewProvider {
 public struct CommitsListDataItem: Identifiable {
     public init(
         sha: String,
-        message: String
+        message: String,
+        urlPath: String
     )
     {
         self.message = message
         self.sha = sha
+        self.urlPath = urlPath
     }
     
     let sha: String
     let message: String
+    let urlPath: String
     
     public var id: String { sha + message }
 }

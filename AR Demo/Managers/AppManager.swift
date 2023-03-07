@@ -66,9 +66,13 @@ extension AppManager {
         for path: String
     ) -> ((Result<Data, Error>) throws -> [Commit]) async throws -> [Commit]
     {
-        networkManager.prepareFetchCommits(
-            with: path,
-            toType: [Commit].self
-        )
+        networkManager.prepareFetchCommits(with: path, toType: [Commit].self)
+    }
+    
+    func commitRequest(
+        for path: String
+    ) -> ((Result<Data, Error>) throws -> CommitDetails) async throws -> CommitDetails
+    {
+        networkManager.prepareFetchCommitDetails(with: path, toType: CommitDetails.self)
     }
 }

@@ -37,8 +37,13 @@ extension ARTextTheme {
         foregroundColor: ColorResource.textOne
     )
     
+    static var title: ARTextTheme = ARTextTheme(
+        font: .system(.title, weight: .bold),
+        foregroundColor: ColorResource.textOne
+    )
+    
     static var title2: ARTextTheme = ARTextTheme(
-        font: .title2,
+        font: .system(.title2, weight: .semibold),
         foregroundColor: ColorResource.textOne
     )
 }
