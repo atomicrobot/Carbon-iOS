@@ -1,6 +1,7 @@
 import ARNetworking
 import Foundation
 
+@MainActor
 class RepositoryListViewModel: ObservableObject {
     @Published var repositories = [Repository]()
     @Published var showError = false
@@ -34,15 +35,11 @@ extension RepositoryListViewModel {
                 let repositories = try await request(NetworkUtils.mapResults)
                 appManager.updateLoading(false)
 
-                DispatchQueue.main.async { [weak self] in
-                    self?.repositories = repositories
-                }
+                self.repositories = repositories
             } catch let error as NSError {
                 appManager.updateLoading(false)
 
-                DispatchQueue.main.async { [weak self] in
-                    self?.error = error
-                }
+                self.error = error
             }
         }
     }
